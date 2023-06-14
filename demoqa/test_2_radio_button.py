@@ -5,14 +5,13 @@ from selenium.webdriver.common.by import By
 
 s = Service('/chromedriver.exe')
 driver = webdriver.Chrome(service=s)
-base_url = 'https://demoqa.com/checkbox'
+base_url = 'https://demoqa.com/radio-button'
 driver.get(base_url)
 
 
-check_box = driver.find_element(By.XPATH, "//span[@class='rct-checkbox']")
-check_box.click()
+radio_button = driver.find_element(By.XPATH, "//label[@for='yesRadio']")
+radio_button.click()
 time.sleep(2)
 
-check_box = driver.find_element(By.XPATH, "//button[@aria-label='Toggle']")
-check_box.click()
+
 
